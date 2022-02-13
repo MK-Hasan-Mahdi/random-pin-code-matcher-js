@@ -5,16 +5,18 @@ function getPin() {
         return pin;
     }
     else {
+        // console.log('3digit pin: ', pin);
         return getPin();
     }
 }
 
 function generatePin() {
-
-
+    const pin = getPin();
+    document.getElementById('display-pin').value = pin;
+    // const displayPin = document.getElementById('display-pin');
+    // displayPin.value = pin;  
 }
 
 
 
-const displayPin = document.getElementById('display-pin');
-displayPin.value = generatePin();
+
